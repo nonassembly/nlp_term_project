@@ -18,9 +18,9 @@ def findnews(site, category):
 				
 				url = "https://news.naver.com/main/list.nhn?mode=LS2D&sid2="+str(site)+"&sid1=100&mid=shm&date=2019"+str(k)+str(j)+"&page="+str(i)
 				html = urlopen(url)
-				source = html.read() # 바이트코드 type으로 소스를 읽는다.
-				html.close() # urlopen을 진행한 후에는 close를 한다.
-				soup = BeautifulSoup(source, "html5lib") # 파싱할 문서를 BeautifulSoup 클래스의 생성자에 넘겨주어 문서 개체를 생성, 관습적으로 soup 이라 부름
+				source = html.read()
+				html.close()
+				soup = BeautifulSoup(source, "html5lib")
 				soup=soup.find_all('dt')
 				print(url)
 				for news in soup:
@@ -34,13 +34,14 @@ def findnews(site, category):
 			j=stJ
 		k=stK
 
+#정치
 findnews(264, 0)
 findnews(265, 0)
 findnews(266, 0)
 findnews(267, 0)
 findnews(268, 0)
 findnews(269, 0)
-
+#경제
 findnews(258, 1)
 findnews(259, 1)
 findnews(261, 1)
@@ -49,7 +50,7 @@ findnews(260, 1)
 findnews(262, 1)
 findnews(310, 1)
 findnews(263, 1)
-
+#사회
 findnews(249, 2)
 findnews(250, 2)
 findnews(251, 2)
@@ -59,7 +60,7 @@ findnews(255, 2)
 findnews(356, 2)
 findnews(276, 2)
 findnews(257, 2)
-
+#생활/문화
 findnews(241, 3)
 findnews(239, 3)
 findnews(240, 3)
@@ -71,13 +72,13 @@ findnews(243, 3)
 findnews(244, 3)
 findnews(248, 3)
 findnews(245, 3)
-
+#세계
 findnews(231, 4)
 findnews(232, 4)
 findnews(233, 4)
 findnews(234, 4)
 findnews(322, 4)
-
+#IT/과학
 findnews(731, 5)
 findnews(226, 5)
 findnews(227, 5)
