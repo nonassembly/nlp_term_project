@@ -43,7 +43,6 @@ model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accur
 hist = model.fit(x_train, y_train, epochs=10, batch_size=64, validation_data=(x_val, y_val))
 
 # 5. 학습과정 살펴보기
-%matplotlib inline
 import matplotlib.pyplot as plt
 
 fig, loss_ax = plt.subplots()
