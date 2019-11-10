@@ -1,7 +1,6 @@
 # 0. 사용할 패키지 불러오기
-from keras.datasets import reuters
 from keras.utils import np_utils
-from keras.p`reprocessing import sequence
+from keras.preprocessing import sequence
 from keras.models import Sequential
 from keras.layers import Dense, Embedding, LSTM
 from keras.layers import Flatten, Dropout
@@ -13,7 +12,6 @@ text_max_words = 120
 # 1. 데이터셋 생성하기
 
 # 훈련셋과 시험셋 불러오기
-(x_train, y_train), (x_test, y_test) = reuters.load_data(num_words=max_features)
 
 # 훈련셋과 검증셋 분리
 x_val = x_train[7000:]
