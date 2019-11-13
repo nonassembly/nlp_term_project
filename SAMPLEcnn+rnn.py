@@ -14,7 +14,7 @@ text_max_words = 120
 
 # 훈련셋과 시험셋 불러오기
 (x_train, y_train), (x_test, y_test) = reuters.load_data(num_words=max_features)
-
+print(x_train)
 # 훈련셋과 검증셋 분리
 x_val = x_train[7000:]
 y_val = y_train[7000:]
@@ -51,7 +51,6 @@ model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accur
 hist = model.fit(x_train, y_train, epochs=10, batch_size=64, validation_data=(x_val, y_val))
 
 # 5. 학습과정 살펴보기
-%matplotlib inline
 import matplotlib.pyplot as plt
 
 fig, loss_ax = plt.subplots()
