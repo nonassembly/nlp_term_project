@@ -1,4 +1,4 @@
-﻿"# NLP_term_project" 
+﻿# NLP_term_project
 
-정규화
-딕셔너리제작
+- 인공지능 term 프로젝트
+ 신문기사 카테고리 추측
